@@ -14,7 +14,7 @@ terraform {
 provider "lacework" {}
 
 module "lacework_module" {
-  source  = "lacework/<PROVIDER>/<NAME>"
+  source  = "lacework/<NAME>/<PROVIDER>"
   version = "~> 0.1"
 }
 ```
