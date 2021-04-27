@@ -69,7 +69,7 @@ bump_version() {
   fi
 
   log "commiting and pushing the version bump to github"
-  git config --global user.email $git_email 
+  git config --global user.email $git_email
   git config --global user.name $git_user
   git_add_version_files
   git commit -m "chore: version bump to v$VERSION"
@@ -142,7 +142,7 @@ push_release() {
   log "commiting and pushing the release to github"
   _version_no_tag=$(echo $VERSION | awk -F. '{printf("%d.%d.%d", $1, $2, $3)}')
   if [ "$CI" != "" ]; then
-    git config --global user.email $git_email 
+    git config --global user.email $git_email
     git config --global user.name $git_user
   fi
   git checkout -B release
@@ -307,4 +307,3 @@ generate_pr_body() {
 }
 EOF
 }
-
